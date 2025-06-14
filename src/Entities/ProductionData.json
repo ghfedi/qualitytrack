@@ -1,0 +1,74 @@
+{
+  "name": "ProductionData",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date de production"
+    },
+    "poste": {
+      "type": "string",
+      "enum": [
+        "Poste 1",
+        "Poste 2",
+        "Poste 3",
+        "Poste 4"
+      ],
+      "description": "Poste de production"
+    },
+    "equipe": {
+      "type": "string",
+      "enum": [
+        "Équipe A",
+        "Équipe B",
+        "Équipe C"
+      ],
+      "description": "Équipe de production"
+    },
+    "type_carton": {
+      "type": "string",
+      "enum": [
+        "Simple cannelure",
+        "Double cannelure",
+        "Triple cannelure"
+      ],
+      "description": "Type de carton produit"
+    },
+    "grammage": {
+      "type": "number",
+      "description": "Grammage du carton en g/m²"
+    },
+    "production_totale": {
+      "type": "number",
+      "description": "Quantité totale produite"
+    },
+    "quantite_rebut": {
+      "type": "number",
+      "description": "Quantité de rebut"
+    },
+    "type_defaut": {
+      "type": "string",
+      "enum": [
+        "Décollement",
+        "Gauchissement",
+        "Écrasement",
+        "Mauvaise cannelure",
+        "Dimension incorrecte",
+        "Qualité impression"
+      ],
+      "description": "Type de défaut principal"
+    },
+    "commentaires": {
+      "type": "string",
+      "description": "Commentaires sur la production"
+    }
+  },
+  "required": [
+    "date",
+    "poste",
+    "equipe",
+    "production_totale",
+    "quantite_rebut"
+  ]
+}

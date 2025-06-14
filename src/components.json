@@ -1,0 +1,130 @@
+{
+"$schema": "https://ui.shadcn.com/schema.json",
+"style": "default",
+"rsc": false,
+"tsx": false,
+"tailwind": {
+"config": "tailwind.config.js",
+"css": "src/index.css",
+"baseColor": "slate",
+"cssVariables": true,
+"prefix": ""
+},
+"aliases": {
+"components": "@/components",
+"utils": "@/lib/utils",
+"ui": "@/components/ui",
+"lib": "@/lib",
+"hooks": "@/hooks"
+},
+"iconLibrary": "lucide",
+"experimentalGlobalCss": false,
+"theme": {
+"extend": {
+"colors": {
+"border": "hsl(var(--border))",
+"input": "hsl(var(--input))",
+"ring": "hsl(var(--ring))",
+"background": "hsl(var(--background))",
+"foreground": "hsl(var(--foreground))",
+"primary": {
+"DEFAULT": "hsl(var(--primary))",
+"foreground": "hsl(var(--primary-foreground))"
+},
+"secondary": {
+"DEFAULT": "hsl(var(--secondary))",
+"foreground": "hsl(var(--secondary-foreground))"
+},
+"destructive": {
+"DEFAULT": "hsl(var(--destructive))",
+"foreground": "hsl(var(--destructive-foreground))"
+},
+"muted": {
+"DEFAULT": "hsl(var(--muted))",
+"foreground": "hsl(var(--muted-foreground))"
+},
+"accent": {
+"DEFAULT": "hsl(var(--accent))",
+"foreground": "hsl(var(--accent-foreground))"
+},
+"popover": {
+"DEFAULT": "hsl(var(--popover))",
+"foreground": "hsl(var(--popover-foreground))"
+},
+"card": {
+"DEFAULT": "hsl(var(--card))",
+"foreground": "hsl(var(--card-foreground))"
+}
+},
+"borderRadius": {
+"lg": "var(--radius)",
+"md": "calc(var(--radius) - 2px)",
+"sm": "calc(var(--radius) - 4px)"
+},
+"keyframes": {
+"accordion-down": {
+"from": { "height": "0" },
+"to": { "height": "var(--radix-accordion-content-height)" }
+},
+"accordion-up": {
+"from": { "height": "var(--radix-accordion-content-height)" },
+"to": { "height": "0" }
+}
+},
+"animation": {
+"accordion-down": "accordion-down 0.2s ease-out",
+"accordion-up": "accordion-up 0.2s ease-out"
+}
+}
+},
+"components": {
+"button": {
+"path": "components/ui/button.tsx",
+"type": "components:ui"
+},
+"card": {
+"path": "components/ui/card.tsx",
+"type": "components:ui"
+},
+"input": {
+"path": "components/ui/input.tsx",
+"type": "components:ui"
+},
+"label": {
+"path": "components/ui/label.tsx",
+"type": "components:ui"
+},
+"select": {
+"path": "components/ui/select.tsx",
+"type": "components:ui"
+},
+"table": {
+"path": "components/ui/table.tsx",
+"type": "components:ui"
+},
+"badge": {
+"path": "components/ui/badge.tsx",
+"type": "components:ui"
+},
+"tabs": {
+"path": "components/ui/tabs.tsx",
+"type": "components:ui"
+},
+"textarea": {
+"path": "components/ui/textarea.tsx",
+"type": "components:ui"
+},
+"switch": {
+"path": "components/ui/switch.tsx",
+"type": "components:ui"
+},
+"separator": {
+"path": "components/ui/separator.tsx",
+"type": "components:ui"
+},
+"sidebar": {
+"path": "components/ui/sidebar.tsx",
+"type": "components:ui"
+}
+}
+}

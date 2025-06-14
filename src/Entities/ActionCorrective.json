@@ -1,0 +1,78 @@
+{
+  "name": "ActionCorrective",
+  "type": "object",
+  "properties": {
+    "titre": {
+      "type": "string",
+      "description": "Titre de l'action corrective"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description détaillée de l'action"
+    },
+    "type_action": {
+      "type": "string",
+      "enum": [
+        "QRQC",
+        "8D",
+        "Maintenance",
+        "Formation",
+        "Amélioration process"
+      ],
+      "description": "Type d'action corrective"
+    },
+    "poste_concerne": {
+      "type": "string",
+      "enum": [
+        "Poste 1",
+        "Poste 2",
+        "Poste 3",
+        "Poste 4",
+        "Tous postes"
+      ],
+      "description": "Poste concerné par l'action"
+    },
+    "responsable": {
+      "type": "string",
+      "description": "Responsable de l'action"
+    },
+    "date_debut": {
+      "type": "string",
+      "format": "date",
+      "description": "Date de début de l'action"
+    },
+    "date_prevue": {
+      "type": "string",
+      "format": "date",
+      "description": "Date prévue de fin"
+    },
+    "statut": {
+      "type": "string",
+      "enum": [
+        "En cours",
+        "Terminé",
+        "En retard",
+        "Annulé"
+      ],
+      "default": "En cours",
+      "description": "Statut de l'action"
+    },
+    "priorite": {
+      "type": "string",
+      "enum": [
+        "Haute",
+        "Moyenne",
+        "Basse"
+      ],
+      "default": "Moyenne",
+      "description": "Priorité de l'action"
+    }
+  },
+  "required": [
+    "titre",
+    "type_action",
+    "responsable",
+    "date_debut",
+    "date_prevue"
+  ]
+}
