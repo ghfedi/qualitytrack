@@ -1,12 +1,26 @@
-# React + Vite
+📊 Monitored Indicators
+Scrap Rate (%)
+(Scrap / Total Production) × 100 – by workstation, team, carton type
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overall Equipment Effectiveness (OEE)
 
-Currently, two official plugins are available:
+Machine Downtime (Planned/Unplanned)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Number and type of quality defects (delamination, warping, etc.)
 
-## Expanding the ESLint configuration
+Productivity by team and workstation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+First Pass Yield
+
+🔧 Dashboard Features
+Dynamic filters: period, workstation, team, carton type
+
+Interactive visualizations: graphs, gauges, pie charts, heat maps
+
+Visual alerts if thresholds are exceeded
+
+Performance history by day/week/month
+
+Corrective action tracking (QRQC, 8D, maintenance)
+
+Data export (PDF, Excel) for display or analysis

@@ -10,7 +10,93 @@ import { motion } from "framer-motion";
 export default function ActionsPage() {
     const [actions, setActions] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    const data= [
+        {
+            "titre": "Réglage pression rouleau Poste 3",
+            "description": "Ajustement de la pression du rouleau pour réduire l'écrasement des cartons double cannelure",
+            "type_action": "Maintenance",
+            "poste_concerne": "Poste 3",
+            "responsable": "Marc Dubois",
+            "date_debut": "2024-12-10",
+            "date_prevue": "2024-12-18",
+            "statut": "En cours",
+            "priorite": "Haute",
+            "id": "684b389b507a33a54156463d",
+            "created_date": "2025-06-12T20:29:15.961000",
+            "updated_date": "2025-06-12T20:29:15.961000",
+            "created_by_id": "684b359401e810ca5e3f15b7",
+            "created_by": "fghribi3@gmail.com",
+            "is_sample": false
+        },
+        {
+            "titre": "Formation équipe sur contrôle qualité colle",
+            "description": "Formation des opérateurs sur les contrôles qualité de la colle et détection précoce des décollements",
+            "type_action": "Formation",
+            "poste_concerne": "Tous postes",
+            "responsable": "Sophie Martin",
+            "date_debut": "2024-12-08",
+            "date_prevue": "2024-12-20",
+            "statut": "En cours",
+            "priorite": "Moyenne",
+            "id": "684b389b507a33a54156463e",
+            "created_date": "2025-06-12T20:29:15.961000",
+            "updated_date": "2025-06-12T20:29:15.961000",
+            "created_by_id": "684b359401e810ca5e3f15b7",
+            "created_by": "fghribi3@gmail.com",
+            "is_sample": false
+        },
+        {
+            "titre": "Analyse 8D - Gauchissement Poste 2",
+            "description": "Analyse root cause du problème de gauchissement récurrent sur le poste 2 avec méthode 8D",
+            "type_action": "8D",
+            "poste_concerne": "Poste 2",
+            "responsable": "Jean-Pierre Rousseau",
+            "date_debut": "2024-12-05",
+            "date_prevue": "2024-12-25",
+            "statut": "En cours",
+            "priorite": "Haute",
+            "id": "684b389b507a33a54156463f",
+            "created_date": "2025-06-12T20:29:15.961000",
+            "updated_date": "2025-06-12T20:29:15.961000",
+            "created_by_id": "684b359401e810ca5e3f15b7",
+            "created_by": "fghribi3@gmail.com",
+            "is_sample": false
+        },
+        {
+            "titre": "Maintenance préventive onduleuse",
+            "description": "Maintenance préventive complète de l'onduleuse pour améliorer la qualité des cannelures",
+            "type_action": "Maintenance",
+            "poste_concerne": "Poste 1",
+            "responsable": "Thomas Leroy",
+            "date_debut": "2024-11-28",
+            "date_prevue": "2024-12-15",
+            "statut": "Terminé",
+            "priorite": "Moyenne",
+            "id": "684b389b507a33a541564640",
+            "created_date": "2025-06-12T20:29:15.961000",
+            "updated_date": "2025-06-12T20:29:15.961000",
+            "created_by_id": "684b359401e810ca5e3f15b7",
+            "created_by": "fghribi3@gmail.com",
+            "is_sample": false
+        },
+        {
+            "titre": "QRQC défauts qualité impression",
+            "description": "Quick Response Quality Control suite aux défauts de qualité d'impression détectés",
+            "type_action": "QRQC",
+            "poste_concerne": "Poste 4",
+            "responsable": "Marie Lefebvre",
+            "date_debut": "2024-12-01",
+            "date_prevue": "2024-12-10",
+            "statut": "En retard",
+            "priorite": "Haute",
+            "id": "684b389b507a33a541564641",
+            "created_date": "2025-06-12T20:29:15.961000",
+            "updated_date": "2025-06-12T20:29:15.961000",
+            "created_by_id": "684b359401e810ca5e3f15b7",
+            "created_by": "fghribi3@gmail.com",
+            "is_sample": false
+        }
+    ]
     useEffect(() => {
         loadActions();
     }, []);
@@ -18,7 +104,6 @@ export default function ActionsPage() {
     const loadActions = async () => {
         setIsLoading(true);
         try {
-            const data = await ActionCorrective.list("-created_date");
             setActions(data);
         } catch (error) {
             console.error("Erreur lors du chargement des actions:", error);
